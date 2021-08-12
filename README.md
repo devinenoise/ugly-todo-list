@@ -15,8 +15,8 @@
 1.  [x] It should have a place to store To Dos
 2.  [x] It should have a way to display To Dos
 3.  [x] It should have a way to add a To Do
-4.  [] It should have a way to edit a To Do
-5.  [] It should have a way to remove a To Do
+4.  [x] It should have a way to edit a To Do
+5.  [x] It should have a way to remove a To Do
 
 ### Version 2 Requirements
 
