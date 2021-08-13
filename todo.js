@@ -16,7 +16,7 @@ const editTodo = (index, newTodo) => {
   console.log(todos);
 };
 
-// delete (start, until)
+// delete
 const deleteTodo = index => {
   todos.splice(index, 1);
   console.log(todos);
