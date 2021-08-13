@@ -11,10 +11,13 @@ const addTodo = todo => {
 };
 
 // edit
-const editTodo = (position, todo) => {
-  todos[position] = todo;
+const editTodo = (index, newTodo) => {
+  todos[index] = newTodo;
   console.log(todos);
 };
 
 // delete (start, until)
-//todos.splice(0, 2);
+const deleteTodo = index => {
+  todos.splice(index, 1);
+  console.log(todos);
+};

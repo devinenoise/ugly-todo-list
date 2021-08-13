@@ -14,7 +14,7 @@
 
 1.  [x] It should have a function to add a To Do
 2.  [x] It should have a function to edit a To Do
-3.  [] It should have a function to remove a To Do
+3.  [x] It should have a function to remove a To Do
 
 ### Version 1 Requirements
 
