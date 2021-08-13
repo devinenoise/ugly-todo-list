@@ -5,7 +5,10 @@ let todos = ['Item 1', 'Item 2', 'Item 3'];
 console.log(`Your To Do list contains`, todos);
 
 // add
-todos.push('Item 4');
+const addTodo = todo => {
+  todos.push(todo);
+  console.log('Your To Do', `'`,todo,`'`, 'was added to', todos);
+};
 
 // edit
 todos[0] = 'Item 1 Updated';
