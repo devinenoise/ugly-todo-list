@@ -7,11 +7,14 @@ console.log(`Your To Do list contains`, todos);
 // add
 const addTodo = todo => {
   todos.push(todo);
-  console.log('Your To Do', `'`,todo,`'`, 'was added to', todos);
+  console.log(todos);
 };
 
 // edit
-todos[0] = 'Item 1 Updated';
+const editTodo = (position, todo) => {
+  todos[position] = todo;
+  console.log(todos);
+};
 
 // delete (start, until)
-todos.splice(0, 2);
+//todos.splice(0, 2);
