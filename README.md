@@ -10,12 +10,15 @@
 
 6.  Save Data In Local Storage
 
+### Version 4 Requirements
+
+1.  [] It should have a function to toggle a To Do
+
 ### Version 3 Requirements
 
 1.  [x] It should have an array of objects for the To Dos
 2.  [x] It should have an add function that adds objects
 3.  [x] It should have an edit function to edit objects
-4.  [] It should have a function to toggle a To Do
 
 ### Version 2 Requirements
 
