@@ -10,6 +10,12 @@
 
 6.  Save Data In Local Storage
 
+### Version 3 Requirements
+
+1.  [x] It should have an array of objects for the To Dos
+2.  [] It should have an add function that adds objects
+3.  [] It should have an edit function to edit objects
+
 ### Version 2 Requirements
 
 1.  [x] It should have a function to add a To Do
