@@ -10,6 +10,10 @@
 
 6.  Save Data In Local Storage
 
+### Version 5 Requirements
+
+1.  [] It should have a function for displaying To Dos
+
 ### Version 4 Requirements
 
 1.  [x] It should have a function to toggle a To Do

@@ -22,4 +22,5 @@ const deleteTodo = index => {
 // toggle
 const toggleTodo = index => {
   todos[index].completed = !todos[index].completed;
+  console.log(todos);
 };
