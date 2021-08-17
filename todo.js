@@ -19,3 +19,7 @@ const deleteTodo = index => {
   todos.splice(index, 1);
 };
 
+// toggle
+const toggleTodo = index => {
+  todos[index].completed = !todos[index].completed;
+};

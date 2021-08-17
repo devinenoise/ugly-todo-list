@@ -12,7 +12,7 @@
 
 ### Version 4 Requirements
 
-1.  [] It should have a function to toggle a To Do
+1.  [x] It should have a function to toggle a To Do
 
 ### Version 3 Requirements
 
