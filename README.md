@@ -13,6 +13,8 @@
 ### Version 5 Requirements
 
 1.  [] It should have a function for displaying To Dos
+2.  [] displayTodos should show the todoText property
+3.  [] displayTodos should the completed property
 
 ### Version 4 Requirements
 
