@@ -1,4 +1,4 @@
-// store
+// todos data
 let todos = [
   { todoText: 'Item 1', completed: false },
   { todoText: 'Item 2', completed: false },
@@ -17,21 +17,23 @@ const editTodo = (index, updatedTodo) => {
   displayTodos();
 };
 
-// delete at index
+// delete a todo at a given index
 const deleteTodo = index => {
   todos.splice(index, 1);
   displayTodos();
 };
 
-// toggle completed
+// toggle completed status on a todo at a given index
 const toggleTodo = index => {
   todos[index].completed = !todos[index].completed;
   displayTodos();
 };
 
-// print updates to todos to console
+// prints updates to todos to the console
 const displayTodos = () => {
-  console.log(todos);
+  for (i = 0; i < todos.length; i++) {
+    console.log(todo[i]);
+  }
 };
 
 // show todoText property for all To Dos
