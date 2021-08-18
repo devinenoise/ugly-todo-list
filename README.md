@@ -10,6 +10,12 @@
 
 6.  Save Data In Local Storage
 
+### Version 7 Requirements
+
+1.  [] It should have a displayTodos button
+2.  [] The displayTodos button should run the displayTodos function
+3.  [] It should have a toggleAll button
+
 ### Version 6 Requirements
 
 1.  [x] It should have a function to toggle ALL To Dos
