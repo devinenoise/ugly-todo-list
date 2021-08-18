@@ -10,11 +10,15 @@
 
 6.  Save Data In Local Storage
 
+### Version 6 Requirements
+
+1.  [] It should have a function to toggle ALL To Dos
+
 ### Version 5 Requirements
 
 1.  [x] It should have a function for displaying To Dos
-2.  [x] displayTodos should show the todoText property
-3.  [x] displayTodos should the completed property
+2.  [x] displayTodosText should show the todoText property
+3.  [x] displayTodosCompletionStatus should the completed property
 
 ### Version 4 Requirements
 

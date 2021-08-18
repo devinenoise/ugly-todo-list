@@ -29,10 +29,18 @@ const toggleTodo = index => {
   displayTodos();
 };
 
+// toggle completed status on a todo at a given index
+const toggleAllTodos = todos => {
+  for (i = 0; i < todos.length; i++) {
+    todos[i].completed = !todos[i].completed;
+  }
+  displayTodos();
+};
+
 // prints updates to todos to the console
 const displayTodos = () => {
   for (i = 0; i < todos.length; i++) {
-    console.log(todo[i]);
+    console.log(todos[i]);
   }
 };
 
