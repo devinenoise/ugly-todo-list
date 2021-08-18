@@ -29,31 +29,46 @@ const toggleTodo = index => {
   displayTodos();
 };
 
-// toggle completed status on a todo at a given index
-const toggleAllTodos = todos => {
-  for (i = 0; i < todos.length; i++) {
-    todos[i].completed = !todos[i].completed;
+// toggle completed status on all To Dos and if mixed make all TRUE
+const toggleAllTodos = () => {
+  let completedTodos = 0;
+
+  for (let i = 0; i < todos.length; i++) {
+    if (todos[i].completed === true) {
+      completedTodos++;
+    }
+  }
+  // if completed is true, change to false
+  if (completedTodos === todos.length) {
+    for (let i = 0; i < todos.length; i++) {
+      todos[i].completed = false;
+    }
+    // else change all completed to true
+  } else {
+    for (let i = 0; i < todos.length; i++) {
+      todos[i].completed = true;
+    }
   }
   displayTodos();
 };
 
 // prints updates to todos to the console
 const displayTodos = () => {
-  for (i = 0; i < todos.length; i++) {
+  for (let i = 0; i < todos.length; i++) {
     console.log(todos[i]);
   }
 };
 
 // show todoText property for all To Dos
 const displayTodoText = todo => {
-  for (i = 0; i < todos.length; i++) {
+  for (let i = 0; i < todos.length; i++) {
     console.log(todo[i].todoText);
   }
 };
 
 // show completed property for all To Dos
 const displayTodoCompletionStatus = todo => {
-  for (i = 0; i < todos.length; i++) {
+  for (let i = 0; i < todos.length; i++) {
     console.log(todo[i].completed);
   }
 };

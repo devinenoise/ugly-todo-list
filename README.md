@@ -12,7 +12,10 @@
 
 ### Version 6 Requirements
 
-1.  [] It should have a function to toggle ALL To Dos
+1.  [x] It should have a function to toggle ALL To Dos
+2.  [x] If everything is true ==> change everything to false
+3.  [x] If everything is false ==> change everything to true
+4.  [x] If mixed ==> change everything to true
 
 ### Version 5 Requirements
 
