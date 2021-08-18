@@ -31,14 +31,16 @@ const toggleTodo = index => {
 
 // toggle completed status on all To Dos and if mixed make all TRUE
 const toggleAllTodos = () => {
+  // completedTodos is an accumulator for truthiness to check against
   let completedTodos = 0;
 
   for (let i = 0; i < todos.length; i++) {
     if (todos[i].completed === true) {
+      // increment completedTodos
       completedTodos++;
     }
   }
-  // if completed is true, change to false
+  // if completed is true and is same length as the array, change to false
   if (completedTodos === todos.length) {
     for (let i = 0; i < todos.length; i++) {
       todos[i].completed = false;
