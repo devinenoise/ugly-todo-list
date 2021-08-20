@@ -14,7 +14,8 @@
 
 1.  [x] It should have a displayTodos button
 2.  [x] The displayTodos button should run the displayTodos function
-3.  [] It should have a toggleAll button
+3.  [x] It should have a toggleAll button
+4.  [x] The toggleAll button should run the toggleAll function
 
 ### Version 6 Requirements
 

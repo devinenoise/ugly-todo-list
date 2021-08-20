@@ -75,5 +75,10 @@ const displayTodoCompletionStatus = todo => {
   }
 };
 
+// display to dos button
 const displayTodosButton = document.getElementById('display-todos-button');
 displayTodosButton.addEventListener('click', displayTodos);
+
+// toggle all to dos button
+const toggleAllTodosButton = document.getElementById('toggleAll-todos-button');
+toggleAllTodosButton.addEventListener('click', toggleAllTodos);
