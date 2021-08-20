@@ -62,16 +62,16 @@ const displayTodos = () => {
 };
 
 // show todoText property for all To Dos
-const displayTodoText = todo => {
+const displayTodosText = () => {
   for (let i = 0; i < todos.length; i++) {
-    console.log(todo[i].todoText);
+    console.log(todos[i].todoText);
   }
 };
 
 // show completed property for all To Dos
-const displayTodoCompletionStatus = todo => {
+const displayTodosCompletionStatus = () => {
   for (let i = 0; i < todos.length; i++) {
-    console.log(todo[i].completed);
+    console.log(todos[i].completed);
   }
 };
 
