@@ -74,3 +74,6 @@ const displayTodoCompletionStatus = todo => {
     console.log(todo[i].completed);
   }
 };
+
+const displayTodosButton = document.getElementById('display-todos-button');
+displayTodosButton.addEventListener('click', displayTodos);
