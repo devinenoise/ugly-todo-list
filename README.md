@@ -10,6 +10,13 @@
 
 6.  Save Data In Local Storage
 
+### Version 8 Requirements
+
+1.  [] It should have a button for adding a To Do
+2.  [] It should have a button for editing a To Do
+3.  [] It should have a button for removing a To Do
+4.  [] It should have a button for toggling a To Do
+
 ### Version 7 Requirements
 
 1.  [x] It should have a displayTodos button
