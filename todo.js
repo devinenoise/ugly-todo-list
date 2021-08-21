@@ -6,7 +6,8 @@ let todos = [
 ];
 
 // add a new todo
-const addTodo = todo => {
+const addTodo = () => {
+  let todo = addInput.value;
   todos.push({ todoText: todo, completed: false });
   displayTodos();
 };
@@ -82,3 +83,10 @@ displayTodosButton.addEventListener('click', displayTodos);
 // toggle all to dos button
 const toggleAllTodosButton = document.getElementById('toggleAll-todos-button');
 toggleAllTodosButton.addEventListener('click', toggleAllTodos);
+
+// add to do button
+const addTodoButton = document.getElementById('add-todo-button');
+addTodoButton.addEventListener('click', addTodo);
+
+// input field
+const addInput = document.getElementById('add-input');
