@@ -32,8 +32,10 @@ const deleteTodo = () => {
 };
 
 // toggle completed status on a todo at a given index
-const toggleTodo = index => {
+const toggleTodo = () => {
+  let index = toggleIndexInput.value;
   todos[index].completed = !todos[index].completed;
+  toggleIndexInput.value = '';
   displayTodos();
 };
 
@@ -114,3 +116,10 @@ deleteTodoButton.addEventListener('click', deleteTodo);
 
 // delete at index input field
 const deleteIndexInput = document.getElementById('delete-text-input');
+
+// toggle to do button
+const toggleTodoButton = document.getElementById('toggle-todo-button');
+toggleTodoButton.addEventListener('click', toggleTodo);
+
+// toggle at index input field
+const toggleIndexInput = document.getElementById('toggle-text-input');
