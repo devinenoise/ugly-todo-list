@@ -15,7 +15,7 @@
 1.  [x] It should have a button for adding a To Do
 2.  [x] It should have a button for editing a To Do
 3.  [x] It should have a button for removing a To Do
-4.  [] It should have a button for toggling a To Do
+4.  [x] It should have a button for toggling a To Do
 
 ### Version 7 Requirements
 
