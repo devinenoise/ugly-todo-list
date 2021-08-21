@@ -9,13 +9,18 @@ let todos = [
 const addTodo = () => {
   let todo = addInput.value;
   todos.push({ todoText: todo, completed: false });
+  addInput.value = '';
   displayTodos();
 };
 
-// update todos
-const editTodo = (index, updatedTodo) => {
+// edit a todo
+const editTodo = () => {
+  let index = editIndexInput.value;
+  let updatedTodo = editTextInput.value;
   todos[index].todoText = updatedTodo;
-  displayTodos();
+  editTextInput.value = '';
+  editIndexInput.value = '';
+  displayTodos(); 
 };
 
 // delete a todo at a given index
@@ -88,5 +93,15 @@ toggleAllTodosButton.addEventListener('click', toggleAllTodos);
 const addTodoButton = document.getElementById('add-todo-button');
 addTodoButton.addEventListener('click', addTodo);
 
-// input field
+// add todo input field
 const addInput = document.getElementById('add-input');
+
+// edit to do button
+const editTodoButton = document.getElementById('edit-todo-button');
+editTodoButton.addEventListener('click', editTodo);
+
+// edit index input field
+const editIndexInput = document.getElementById('edit-index-input');
+
+// edit text input field
+const editTextInput = document.getElementById('edit-text-input');
