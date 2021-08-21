@@ -20,12 +20,14 @@ const editTodo = () => {
   todos[index].todoText = updatedTodo;
   editTextInput.value = '';
   editIndexInput.value = '';
-  displayTodos(); 
+  displayTodos();
 };
 
 // delete a todo at a given index
-const deleteTodo = index => {
+const deleteTodo = () => {
+  let index = deleteIndexInput.value;
   todos.splice(index, 1);
+  deleteIndexInput.value = '';
   displayTodos();
 };
 
@@ -105,3 +107,10 @@ const editIndexInput = document.getElementById('edit-index-input');
 
 // edit text input field
 const editTextInput = document.getElementById('edit-text-input');
+
+// delete to do button
+const deleteTodoButton = document.getElementById('delete-todo-button');
+deleteTodoButton.addEventListener('click', deleteTodo);
+
+// delete at index input field
+const deleteIndexInput = document.getElementById('delete-text-input');
