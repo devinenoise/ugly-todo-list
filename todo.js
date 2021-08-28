@@ -64,11 +64,18 @@ const toggleAllTodos = () => {
   displayTodos();
 };
 
-// prints updates to todos to the console
+// prints to dos to the DOM
 const displayTodos = () => {
-  const todoList = document.getElementById('todo-list');
   for (let i = 0; i < todos.length; i++) {
+    console.log(todos[i]);
+  }
+  // clear out existing li's inside of toList first
+  todoList.innerHTML = '';
+
+  for (let i = 0; i < todos.length; i++) {
+    // create the list item for each to do
     const todoItem = document.createElement('li');
+    // append the <li> to the <ul> in the DOM
     todoList.appendChild(todoItem);
   }
 };
@@ -126,4 +133,5 @@ toggleTodoButton.addEventListener('click', toggleTodo);
 // toggle at index input field
 const toggleIndexInput = document.getElementById('toggle-text-input');
 
-// grab the to do list UL id
+// grab the to do list <ul> id
+const todoList = document.getElementById('todo-list');
