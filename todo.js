@@ -66,8 +66,10 @@ const toggleAllTodos = () => {
 
 // prints updates to todos to the console
 const displayTodos = () => {
+  const todoList = document.getElementById('todo-list');
   for (let i = 0; i < todos.length; i++) {
-    console.log(todos[i]);
+    const todoItem = document.createElement('li');
+    todoList.appendChild(todoItem);
   }
 };
 
@@ -123,3 +125,5 @@ toggleTodoButton.addEventListener('click', toggleTodo);
 
 // toggle at index input field
 const toggleIndexInput = document.getElementById('toggle-text-input');
+
+// grab the to do list UL id

@@ -10,6 +10,13 @@
 
 6.  Save Data In Local Storage
 
+### Version 9 Requirements
+
+1.  [x] There should be an li for each To Do
+2.  [] 
+3.  [] 
+4.  [] 
+
 ### Version 8 Requirements
 
 1.  [x] It should have a button for adding a To Do
