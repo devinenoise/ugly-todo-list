@@ -66,17 +66,21 @@ const toggleAllTodos = () => {
 
 // prints to dos to the DOM
 const displayTodos = () => {
-  for (let i = 0; i < todos.length; i++) {
-    console.log(todos[i]);
-  }
-  // clear out existing li's inside of toList first
+  // clear out existing li's inside of todoList first
   todoList.innerHTML = '';
 
   for (let i = 0; i < todos.length; i++) {
     // create the list item for each to do
     const todoItem = document.createElement('li');
-    // display the to do objects text to the DOM
-    todoItem.innerText = todos[i].todoText;
+
+    // display the to do objects text and completed status to the DOM
+    if (todos[i].completed === true) {
+      // if completed is true display with an X
+      todoItem.innerText = `[X] ${todos[i].todoText}`;
+    } else {
+      todoItem.innerText = `[ ] ${todos[i].todoText}`;
+    }
+
     // append the <li> to the <ul> in the DOM
     todoList.appendChild(todoItem);
   }

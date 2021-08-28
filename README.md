@@ -13,8 +13,8 @@
 ### Version 9 Requirements
 
 1.  [x] There should be an li for each To Do
-2.  [x] Each li should show the todoText property.
-3.  []
+2.  [x] Each li should show the todoText property
+3.  [x] Each li should show the completed property
 4.  []
 
 ### Version 8 Requirements
