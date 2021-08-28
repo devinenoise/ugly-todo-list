@@ -13,7 +13,7 @@
 ### Version 11 Requirements
 
 1.  [] There should be a toggle button for each To Do
-2.  []
+2.  [] The toggle buttons should toggle a To Do
 
 ### Version 10 Requirements
 

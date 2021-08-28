@@ -25,8 +25,7 @@ const editTodo = () => {
 
 // delete a todo at a given index
 const deleteTodo = event => {
-  // event.target.id is the remove button to control
-  const todoToRemove = event.target.id;
+  const todoToRemove = event.currentTarget.id;
   todos.splice(todoToRemove, 1);
   displayTodos();
 };
@@ -80,12 +79,12 @@ const displayTodos = () => {
     } else {
       todoItem.innerText = `[ ] ${todos[i].todoText}`;
     }
-    // create remove button
+    // create remove button with text
     const removeButton = document.createElement('button');
     removeButton.innerText = 'Remove';
     // Add the event listener to the remove button
     removeButton.addEventListener('click', deleteTodo);
-    // setting the id to i every time so button works
+    // setting the id to i so the button works on the correct to do
     removeButton.id = i;
     // append the <li> to the <ul> in the DOM
     todoList.appendChild(todoItem);
