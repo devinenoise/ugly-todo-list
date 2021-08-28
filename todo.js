@@ -85,6 +85,8 @@ const displayTodos = () => {
     removeButton.innerText = 'Remove';
     // Add the event listener to the remove button
     removeButton.addEventListener('click', deleteTodo);
+    // setting the id to i every time so button works
+    removeButton.id = i;
     // append the <li> to the <ul> in the DOM
     todoList.appendChild(todoItem);
     // append button to the li

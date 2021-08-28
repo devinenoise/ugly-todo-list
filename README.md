@@ -10,11 +10,15 @@
 
 6.  Save Data In Local Storage
 
+### Version 11 Requirements
+
+1.  [] There should be a toggle button for each To Do
+2.  []
+
 ### Version 10 Requirements
 
 1.  [x] There should be a remove button for each To Do
 2.  [x] The remove button should remove a To Do
-3.  []
 
 ### Version 9 Requirements
 
