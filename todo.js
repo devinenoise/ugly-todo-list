@@ -75,6 +75,8 @@ const displayTodos = () => {
   for (let i = 0; i < todos.length; i++) {
     // create the list item for each to do
     const todoItem = document.createElement('li');
+    // display the to do objects text to the DOM
+    todoItem.innerText = todos[i].todoText;
     // append the <li> to the <ul> in the DOM
     todoList.appendChild(todoItem);
   }
