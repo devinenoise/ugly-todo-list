@@ -80,9 +80,13 @@ const displayTodos = () => {
     } else {
       todoItem.innerText = `[ ] ${todos[i].todoText}`;
     }
-
+    // create delete button
+    const removeButton = document.createElement('button');
+    removeButton.innerText = 'Remove';
     // append the <li> to the <ul> in the DOM
     todoList.appendChild(todoItem);
+    // append button to the li
+    todoList.appendChild(removeButton);
   }
 };
 
@@ -99,10 +103,6 @@ const displayTodosCompletionStatus = () => {
     console.log(todos[i].completed);
   }
 };
-
-// display to dos button
-const displayTodosButton = document.getElementById('display-todos-button');
-displayTodosButton.addEventListener('click', displayTodos);
 
 // toggle all to dos button
 const toggleAllTodosButton = document.getElementById('toggleAll-todos-button');
@@ -141,3 +141,5 @@ const toggleIndexInput = document.getElementById('toggle-text-input');
 
 // grab the to do list <ul> id
 const todoList = document.getElementById('todo-list');
+
+displayTodos();

@@ -10,12 +10,17 @@
 
 6.  Save Data In Local Storage
 
+### Version 10 Requirements
+
+1.  [x] There should be a remove button for each To Do
+2.  [] The remove button should remove a To Do
+3.  [] 
+
 ### Version 9 Requirements
 
 1.  [x] There should be an li for each To Do
 2.  [x] Each li should show the todoText property
 3.  [x] Each li should show the completed property
-4.  []
 
 ### Version 8 Requirements
 
