@@ -13,8 +13,8 @@
 ### Version 10 Requirements
 
 1.  [x] There should be a remove button for each To Do
-2.  [] The remove button should remove a To Do
-3.  [] 
+2.  [x] The remove button should remove a To Do
+3.  []
 
 ### Version 9 Requirements
 

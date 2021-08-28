@@ -24,10 +24,10 @@ const editTodo = () => {
 };
 
 // delete a todo at a given index
-const deleteTodo = () => {
-  let index = deleteIndexInput.value;
-  todos.splice(index, 1);
-  deleteIndexInput.value = '';
+const deleteTodo = event => {
+  // event.target.id is the remove button to control
+  const todoToRemove = event.target.id;
+  todos.splice(todoToRemove, 1);
   displayTodos();
 };
 
@@ -80,9 +80,11 @@ const displayTodos = () => {
     } else {
       todoItem.innerText = `[ ] ${todos[i].todoText}`;
     }
-    // create delete button
+    // create remove button
     const removeButton = document.createElement('button');
     removeButton.innerText = 'Remove';
+    // Add the event listener to the remove button
+    removeButton.addEventListener('click', deleteTodo);
     // append the <li> to the <ul> in the DOM
     todoList.appendChild(todoItem);
     // append button to the li
@@ -124,10 +126,6 @@ const editIndexInput = document.getElementById('edit-index-input');
 
 // edit text input field
 const editTextInput = document.getElementById('edit-text-input');
-
-// delete to do button
-const deleteTodoButton = document.getElementById('delete-todo-button');
-deleteTodoButton.addEventListener('click', deleteTodo);
 
 // delete at index input field
 const deleteIndexInput = document.getElementById('delete-text-input');
