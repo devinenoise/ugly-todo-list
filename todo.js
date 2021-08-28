@@ -31,10 +31,11 @@ const deleteTodo = event => {
 };
 
 // toggle completed status on a todo at a given index
-const toggleTodo = () => {
-  let index = toggleIndexInput.value;
-  todos[index].completed = !todos[index].completed;
-  toggleIndexInput.value = '';
+const toggleTodo = event => {
+  // setting the new index position with currentTarget
+  let todoToToggle = event.currentTarget.id;
+  // using the new index value use it to make it the opposite
+  todos[todoToToggle].completed = !todos[todoToToggle].completed;
   displayTodos();
 };
 
@@ -86,8 +87,16 @@ const displayTodos = () => {
     removeButton.addEventListener('click', deleteTodo);
     // setting the id to i so the button works on the correct to do
     removeButton.id = i;
+
+    const toggleButton = document.createElement('button');
+    toggleButton.innerText = 'Toggle';
+    toggleButton.addEventListener('click', toggleTodo);
+    toggleButton.id = i;
+
     // append the <li> to the <ul> in the DOM
     todoList.appendChild(todoItem);
+    // append toggle button to the li
+    todoList.appendChild(toggleButton);
     // append button to the li
     todoList.appendChild(removeButton);
   }
@@ -130,13 +139,6 @@ const editTextInput = document.getElementById('edit-text-input');
 
 // delete at index input field
 const deleteIndexInput = document.getElementById('delete-text-input');
-
-// toggle to do button
-const toggleTodoButton = document.getElementById('toggle-todo-button');
-toggleTodoButton.addEventListener('click', toggleTodo);
-
-// toggle at index input field
-const toggleIndexInput = document.getElementById('toggle-text-input');
 
 // grab the to do list <ul> id
 const todoList = document.getElementById('todo-list');
