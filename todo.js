@@ -8,7 +8,9 @@ let todos = [
 // add a new todo
 const addTodo = event => {
   let todo = addInput.value;
-  todos.push({ todoText: todo, completed: false });
+  if (addInput.value !== '') {
+    todos.push({ todoText: todo, completed: false });
+  }
   addInput.value = '';
   displayTodos();
 };
@@ -16,7 +18,9 @@ const addTodo = event => {
 // edit a to do
 const editTodo = event => {
   let index = event.currentTarget.id.split('-')[1];
+  // prompt (message, default field)
   let updatedTodo = window.prompt('Update Your To Do', todos[index].todoText);
+  // checks if user presses cancel or ok on an empty string
   if ((updatedTodo === null) | (updatedTodo === '')) {
     return todos[index].todoText;
   }
@@ -128,9 +132,6 @@ addTodoButton.addEventListener('click', addTodo);
 // add to do input field
 const addInput = document.getElementById('add-input');
 
-// grab the to do list <ul> id
-const todoList = document.getElementById('todo-list');
-
 // listen for the enter key on the add to do input field
 addInput.addEventListener('keyup', event => {
   if (event.key === 'Enter') {
@@ -139,4 +140,8 @@ addInput.addEventListener('keyup', event => {
   }
 });
 
+// grab the to do list <ul> id
+const todoList = document.getElementById('todo-list');
+
+// display initial to dos
 displayTodos();
