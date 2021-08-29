@@ -14,12 +14,11 @@ const addTodo = () => {
 };
 
 // edit a todo
-const editTodo = () => {
-  let index = editIndexInput.value;
+const editTodo = event => {
+  let index = event.currentTarget.id.split('-')[1];
   let updatedTodo = editTextInput.value;
   todos[index].todoText = updatedTodo;
-  editTextInput.value = '';
-  editIndexInput.value = '';
+  todoList.appendChild(editIndexInput);
   displayTodos();
 };
 
@@ -80,13 +79,6 @@ const displayTodos = () => {
     } else {
       todoItem.innerText = `[ ] ${todos[i].todoText}`;
     }
-    // create remove button with text
-    const removeButton = document.createElement('button');
-    removeButton.innerText = 'Remove';
-    // Add the event listener to the remove button
-    removeButton.addEventListener('click', removeTodo);
-    // setting the id to i plus a prefixed string so the button removes the correct to do uniquely
-    removeButton.id = `remove-${i}`;
 
     // create toggle button with text
     const toggleButton = document.createElement('button');
@@ -96,10 +88,28 @@ const displayTodos = () => {
     // setting the id to i plus a prefixed string so the button toggles the correct to do uniquely
     toggleButton.id = `toggle-${i}`;
 
+    // create edit button with text
+    const editButton = document.createElement('button');
+    editButton.innerText = 'Edit';
+    // Add the event listener to the edit button
+    editButton.addEventListener('click', editTodo);
+    // setting the id to i plus a prefixed string so the button edits the correct to do uniquely
+    editButton.id = `edit-${i}`;
+
+    // create remove button with text
+    const removeButton = document.createElement('button');
+    removeButton.innerText = 'Remove';
+    // Add the event listener to the remove button
+    removeButton.addEventListener('click', removeTodo);
+    // setting the id to i plus a prefixed string so the button removes the correct to do uniquely
+    removeButton.id = `remove-${i}`;
+
     // append the <li> to the <ul> in the DOM
     todoList.appendChild(todoItem);
     // append toggle button to the li
     todoList.appendChild(toggleButton);
+    // append toggle button to the li
+    todoList.appendChild(editButton);
     // append button to the li
     todoList.appendChild(removeButton);
   }
@@ -115,10 +125,6 @@ addTodoButton.addEventListener('click', addTodo);
 
 // add todo input field
 const addInput = document.getElementById('add-input');
-
-// edit to do button
-const editTodoButton = document.getElementById('edit-todo-button');
-editTodoButton.addEventListener('click', editTodo);
 
 // edit index input field
 const editIndexInput = document.getElementById('edit-index-input');
