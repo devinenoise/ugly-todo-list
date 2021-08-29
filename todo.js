@@ -13,22 +13,22 @@ const addTodo = () => {
   displayTodos();
 };
 
-// edit a todo
+// edit a to do
 const editTodo = event => {
   let index = event.currentTarget.id.split('-')[1];
-  let updatedTodo = window.prompt();
+  let updatedTodo = window.prompt('Update Your To Do', todos[index].todoText);
   todos[index].todoText = updatedTodo;
   displayTodos();
 };
 
-// delete a todo at a given index
+// delete a to do
 const removeTodo = event => {
   const todoToRemove = event.currentTarget.id.split('-')[1];
   todos.splice(todoToRemove, 1);
   displayTodos();
 };
 
-// toggle completed status on a todo at a given index
+// toggle completed status on a to do at a given index
 const toggleTodo = event => {
   // setting the new index position with currentTarget and giving toggle button a unique id from remove with the split method
   let todoToToggle = event.currentTarget.id.split('-')[1];
@@ -124,9 +124,6 @@ addTodoButton.addEventListener('click', addTodo);
 
 // add todo input field
 const addInput = document.getElementById('add-input');
-
-// edit text input field
-const editTextInput = document.getElementById('edit-text-input');
 
 // grab the to do list <ul> id
 const todoList = document.getElementById('todo-list');
