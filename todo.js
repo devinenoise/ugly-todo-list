@@ -6,7 +6,7 @@ let todos = [
 ];
 
 // add a new todo
-const addTodo = () => {
+const addTodo = event => {
   let todo = addInput.value;
   todos.push({ todoText: todo, completed: false });
   addInput.value = '';
@@ -130,5 +130,13 @@ const addInput = document.getElementById('add-input');
 
 // grab the to do list <ul> id
 const todoList = document.getElementById('todo-list');
+
+// listen for the enter key on the add to do input field
+addInput.addEventListener('keyup', event => {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    document.getElementById('add-todo-button').click();
+  }
+});
 
 displayTodos();
