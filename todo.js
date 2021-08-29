@@ -17,6 +17,9 @@ const addTodo = () => {
 const editTodo = event => {
   let index = event.currentTarget.id.split('-')[1];
   let updatedTodo = window.prompt('Update Your To Do', todos[index].todoText);
+  if ((updatedTodo === null) | (updatedTodo === '')) {
+    return todos[index].todoText;
+  }
   todos[index].todoText = updatedTodo;
   displayTodos();
 };
@@ -122,7 +125,7 @@ toggleAllTodosButton.addEventListener('click', toggleAllTodos);
 const addTodoButton = document.getElementById('add-todo-button');
 addTodoButton.addEventListener('click', addTodo);
 
-// add todo input field
+// add to do input field
 const addInput = document.getElementById('add-input');
 
 // grab the to do list <ul> id

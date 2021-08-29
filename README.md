@@ -14,6 +14,8 @@
 
 1.  [x] There should be an edit button for each To Do
 2.  [x] The edit buttons should be able to edit a To Do
+3.  [x] If the user chooses cancel it should do nothing
+4.  [x] If the user chooses ok to an empty field it should do nothing
 
 ### Version 11 Requirements
 
