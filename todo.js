@@ -24,17 +24,17 @@ const editTodo = () => {
 };
 
 // delete a todo at a given index
-const deleteTodo = event => {
-  const todoToRemove = event.currentTarget.id;
+const removeTodo = event => {
+  const todoToRemove = event.currentTarget.id.split('-')[1];
   todos.splice(todoToRemove, 1);
   displayTodos();
 };
 
 // toggle completed status on a todo at a given index
 const toggleTodo = event => {
-  // setting the new index position with currentTarget
-  let todoToToggle = event.currentTarget.id;
-  // using the new index value use it to make it the opposite
+  // setting the new index position with currentTarget and giving toggle button a unique id from remove with the split method
+  let todoToToggle = event.currentTarget.id.split('-')[1];
+  // using the new index value assign its value to the opposite of itself
   todos[todoToToggle].completed = !todos[todoToToggle].completed;
   displayTodos();
 };
@@ -84,14 +84,17 @@ const displayTodos = () => {
     const removeButton = document.createElement('button');
     removeButton.innerText = 'Remove';
     // Add the event listener to the remove button
-    removeButton.addEventListener('click', deleteTodo);
-    // setting the id to i so the button works on the correct to do
-    removeButton.id = i;
+    removeButton.addEventListener('click', removeTodo);
+    // setting the id to i plus a prefixed string so the button removes the correct to do uniquely
+    removeButton.id = `remove-${i}`;
 
+    // create toggle button with text
     const toggleButton = document.createElement('button');
     toggleButton.innerText = 'Toggle';
+    // Add the event listener to the toggle button
     toggleButton.addEventListener('click', toggleTodo);
-    toggleButton.id = i;
+    // setting the id to i plus a prefixed string so the button toggles the correct to do uniquely
+    toggleButton.id = `toggle-${i}`;
 
     // append the <li> to the <ul> in the DOM
     todoList.appendChild(todoItem);
@@ -99,20 +102,6 @@ const displayTodos = () => {
     todoList.appendChild(toggleButton);
     // append button to the li
     todoList.appendChild(removeButton);
-  }
-};
-
-// show todoText property for all To Dos
-const displayTodosText = () => {
-  for (let i = 0; i < todos.length; i++) {
-    console.log(todos[i].todoText);
-  }
-};
-
-// show completed property for all To Dos
-const displayTodosCompletionStatus = () => {
-  for (let i = 0; i < todos.length; i++) {
-    console.log(todos[i].completed);
   }
 };
 
@@ -136,9 +125,6 @@ const editIndexInput = document.getElementById('edit-index-input');
 
 // edit text input field
 const editTextInput = document.getElementById('edit-text-input');
-
-// delete at index input field
-const deleteIndexInput = document.getElementById('delete-text-input');
 
 // grab the to do list <ul> id
 const todoList = document.getElementById('todo-list');
