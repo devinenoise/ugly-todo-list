@@ -23,3 +23,7 @@ input {
   border-radius: 2px;
   border: 0;
 }
+
+#edit-text-input {
+  visibility: hidden;
+}

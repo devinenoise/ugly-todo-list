@@ -13,7 +13,7 @@
 ### Version 12 Requirements
 
 1.  [x] There should be an edit button for each To Do
-2.  [] The edit buttons should be able to edit a To Do
+2.  [x] The edit buttons should be able to edit a To Do
 
 ### Version 11 Requirements
 

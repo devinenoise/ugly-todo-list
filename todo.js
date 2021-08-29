@@ -16,9 +16,8 @@ const addTodo = () => {
 // edit a todo
 const editTodo = event => {
   let index = event.currentTarget.id.split('-')[1];
-  let updatedTodo = editTextInput.value;
+  let updatedTodo = window.prompt();
   todos[index].todoText = updatedTodo;
-  todoList.appendChild(editIndexInput);
   displayTodos();
 };
 
@@ -125,9 +124,6 @@ addTodoButton.addEventListener('click', addTodo);
 
 // add todo input field
 const addInput = document.getElementById('add-input');
-
-// edit index input field
-const editIndexInput = document.getElementById('edit-index-input');
 
 // edit text input field
 const editTextInput = document.getElementById('edit-text-input');
